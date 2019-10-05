@@ -1,0 +1,27 @@
+2019-10-03 15:14:00.224 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 教师姓名李子叶
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:00.225 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 教师名称是：李子叶
+2019-10-03 15:14:07.861 logback [http-nio-8080-exec-10] INFO  c.a.o.controller.user.UserController - 
+2019-10-03 15:14:07.862 logback [http-nio-8080-exec-10] INFO  c.a.o.controller.user.UserController - start
+2019-10-03 15:14:07.862 logback [http-nio-8080-exec-10] INFO  c.a.o.controller.user.UserController - 获取全部用户信息
+2019-10-03 15:14:07.869 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:07.869 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:07.869 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 教师姓名张三
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:14.932 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 教师名称是：张三
+2019-10-03 15:14:26.720 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:14:26.720 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:14:26.720 logback [http-nio-8080-exec-2] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息

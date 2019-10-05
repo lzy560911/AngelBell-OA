@@ -1,0 +1,9 @@
+2019-10-02 17:48:10.291 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-02 17:48:10.292 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-02 17:48:10.292 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-02 17:48:10.292 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-02 17:48:10.293 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-02 17:48:10.293 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 教师姓名张三
+2019-10-02 17:48:10.293 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-02 17:48:10.293 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-02 17:48:10.293 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 教师名称是：张三

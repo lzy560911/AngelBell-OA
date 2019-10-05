@@ -1,0 +1,56 @@
+2019-10-03 15:09:00.157 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'registerKeywordHandleFilter'; order=3, resource=class path resource [cn/angelbell/oa/config/FilterConfig.class]
+2019-10-03 15:09:00.158 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'druidServlet'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2019-10-03 15:09:00.159 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'filterRegistrationBean'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2019-10-03 15:09:00.159 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2019-10-03 15:09:00.213 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]
+2019-10-03 15:09:00.214 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'myFilter'; order=2147483647, resource=file [E:\AngelBell\AngelBell-master\target\classes\cn\angelbell\oa\filter\MyFilter.class]
+2019-10-03 15:09:00.214 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'shirFilter'; order=2147483647, resource=class path resource [cn/angelbell/oa/shiro/ShiroConfig.class]
+2019-10-03 15:09:00.223 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-10-03 15:09:00.223 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'KeywordHandleFilter' to urls: [/]
+2019-10-03 15:09:00.224 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2019-10-03 15:09:00.224 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'myFilter' to: [/*]
+2019-10-03 15:09:00.224 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'shirFilter' to: [/*]
+2019-10-03 15:09:00.224 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2019-10-03 15:09:00.225 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2019-10-03 15:09:00.275 logback [localhost-startStop-1] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter初始化
+2019-10-03 15:09:00.276 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Initializing filter 'characterEncodingFilter'
+2019-10-03 15:09:00.277 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured successfully
+2019-10-03 15:09:00.634 logback [restartedMain] INFO  cn.angelbell.oa.config.WebConfig - 配置静态资源所在目录
+2019-10-03 15:09:01.285 logback [restartedMain] DEBUG o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2019-10-03 15:09:01.900 logback [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2019-10-03 15:09:02.139 logback [restartedMain] DEBUG o.s.b.d.livereload.LiveReloadServer - Starting live reload server on port 35729
+2019-10-03 15:09:02.141 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2019-10-03 15:09:02.216 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@63d0d55f]
+2019-10-03 15:09:02.268 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2019-10-03 15:09:02.275 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
+2019-10-03 15:09:02.276 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2019-10-03 15:09:02.276 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@6b020f71
+2019-10-03 15:09:02.276 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application cn.angelbell.oa.AngelApplication with URLs [file:/E:/AngelBell/AngelBell-master/target/classes/]
+2019-10-03 15:09:02.276 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Started AngelApplication in 5.431 seconds (JVM running for 6.165)
+2019-10-03 15:09:12.232 logback [http-nio-8080-exec-1] INFO  c.a.o.controller.user.UserController - 
+2019-10-03 15:09:12.232 logback [http-nio-8080-exec-1] INFO  c.a.o.controller.user.UserController - start
+2019-10-03 15:09:12.232 logback [http-nio-8080-exec-1] INFO  c.a.o.controller.user.UserController - 获取全部用户信息
+2019-10-03 15:09:12.253 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:12.253 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:12.253 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-10-03 15:09:31.433 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - 
+2019-10-03 15:09:31.433 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - start
+2019-10-03 15:09:31.433 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - 获取全部用户信息
+2019-10-03 15:09:31.440 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:31.440 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:31.440 logback [http-nio-8080-exec-6] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:34.018 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 教师姓名
+2019-10-03 15:09:44.425 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 教师姓名
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:09:44.426 logback [http-nio-8080-exec-10] INFO  c.a.o.c.teacher.TeacherController - 时间范围是：2019-10-01---2019-10-03

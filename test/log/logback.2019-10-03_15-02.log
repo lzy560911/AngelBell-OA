@@ -1,0 +1,12 @@
+2019-10-03 15:02:42.722 logback [http-nio-8080-exec-5] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:02:42.736 logback [http-nio-8080-exec-5] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:02:42.736 logback [http-nio-8080-exec-5] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-10-03 15:02:45.108 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:02:45.109 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:02:45.109 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 按条件查询教师信息
+2019-10-03 15:02:45.109 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:02:45.109 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:02:45.109 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 教师姓名1212
+2019-10-03 15:02:45.221 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-10-03 15:02:45.221 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-10-03 15:02:45.221 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 教师名称是：1212

@@ -1,0 +1,12 @@
+2019-09-10 17:18:08.742 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 
+2019-09-10 17:18:08.852 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - start
+2019-09-10 17:18:08.852 logback [http-nio-8080-exec-3] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-09-10 17:18:09.866 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 
+2019-09-10 17:18:09.867 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - start
+2019-09-10 17:18:09.867 logback [http-nio-8080-exec-7] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-09-10 17:18:11.306 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 
+2019-09-10 17:18:11.306 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - start
+2019-09-10 17:18:11.306 logback [http-nio-8080-exec-9] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息
+2019-09-10 17:18:12.602 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 
+2019-09-10 17:18:12.602 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - start
+2019-09-10 17:18:12.602 logback [http-nio-8080-exec-8] INFO  c.a.o.c.teacher.TeacherController - 获取全部教师信息

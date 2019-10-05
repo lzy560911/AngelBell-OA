@@ -1,0 +1,9 @@
+2019-09-05 17:01:06.800 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - 
+2019-09-05 17:01:06.802 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - start
+2019-09-05 17:01:06.802 logback [http-nio-8080-exec-3] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
+2019-09-05 17:01:11.505 logback [http-nio-8080-exec-6] INFO  c.a.o.c.user.LoginController - 
+2019-09-05 17:01:11.505 logback [http-nio-8080-exec-6] INFO  c.a.o.c.user.LoginController - start
+2019-09-05 17:01:11.505 logback [http-nio-8080-exec-6] INFO  c.a.o.c.user.LoginController - 登录验证
+2019-09-05 17:01:28.892 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - 
+2019-09-05 17:01:28.892 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - start
+2019-09-05 17:01:28.893 logback [http-nio-8080-exec-5] INFO  c.a.o.controller.user.UserController - 获取全部用户信息
