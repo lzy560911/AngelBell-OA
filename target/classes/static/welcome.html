@@ -8,12 +8,53 @@
         <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
         <link rel="stylesheet" href="/static/css/font.css">
         <link rel="stylesheet" href="/static/css/xadmin.css">
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="/static/lib/layui/layui.js" charset="utf-8"></script>
+	    <script type="text/javascript" src="/static/js/xadmin.js"></script>
+	    <script type="text/javascript" src="/static/js/cookie.js"></script>
+	   <!--  <script charset="utf-8" src="http://map.qq.com/api/js?v=2.exp&key=U7CBZ-WWHWJ-V27FI-KD4KL-Z4PCJ-CWFLP"></script> -->
+    	<script type="text/javascript" src="/static/js/visit.net-1.0.js"></script>
     </head>
     <body>
     <div class="x-body">
         <blockquote class="layui-elem-quote">欢迎管理员：
-            <span class="x-red">test</span>！当前时间:2018-04-25 20:50:53  <a onclick="parent.x_admin_add_to_tab('在tab打开','https://www.163.com',true)" style="color: red" href="javascript:;">在tab打开</a>
+            <span class="x-red" id="userName"></span>&nbsp;&nbsp;当前时间:<span id="dateTime"></span>  <a onclick="parent.x_admin_add_to_tab('在tab打开','https://www.163.com',true)" style="color: red" href="javascript:;">在tab打开</a>
         </blockquote>
+        <script type="text/javascript">
+		    $(function() {
+		        $.ajax({
+		            type : "get",
+		            url:"/user/getUserName",
+		            cache : false,
+		            async : true,
+		            dataType : "jsonp",
+		            timeout:30000,
+		            jsonpCallback:"callback",
+		            success : function(result) {
+		                console.log("result："+result.userName);
+		                document.getElementById("userName").innerHTML=result.userName;
+		            },
+		            error : function() {
+		                alert("请求失败");
+		            }
+		        });
+		    });
+		     Date.prototype.format = function (fmt) {
+	            var o = {
+	                "y+": this.getFullYear, //年
+	                "M+": this.getMonth() + 1, //月份
+	                "d+": this.getDate(), //日
+	                "h+": this.getHours(), //小时
+	                "m+": this.getMinutes(), //分
+	                "s+": this.getSeconds() //秒
+	            };
+	            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+	            for (var k in o)
+	                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+	            return fmt;
+	        }
+        	setInterval("document.getElementById('dateTime').innerHTML = (new Date()).format('yyyy-MM-dd hh:mm:ss');", 1000);
+		</script>
         <fieldset class="layui-elem-field">
             <legend>数据统计</legend>
             <div class="layui-field-box">
@@ -25,42 +66,42 @@
                                     <ul class="layui-row layui-col-space10 layui-this">
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>直营校教师数</h3>
+                                                <h3>校区教师数</h3>
                                                 <p>
                                                     <cite>66</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>直营校学生数</h3>
+                                                <h3>校区学生数</h3>
                                                 <p>
                                                     <cite>12</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>加盟校教师数</h3>
+                                                <h3>本月入学学生数</h3>
                                                 <p>
                                                     <cite>99</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>加盟校学生数</h3>
+                                                <h3>校区满意度</h3>
                                                 <p>
                                                     <cite>67</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>加盟校区数</h3>
+                                                <h3>当日访问量</h3>
                                                 <p>
                                                     <cite>67</cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>学生总数</h3>
+                                                <h3>本月访问量</h3>
                                                 <p>
                                                     <cite>6766</cite></p>
                                             </a>
@@ -74,17 +115,17 @@
             </div>
         </fieldset>
         <fieldset class="layui-elem-field">
-            <legend>系统通知</legend>
+            <legend>安亲新闻</legend>
             <div class="layui-field-box">
                 <table class="layui-table" lay-skin="line">
                     <tbody>
                         <tr>
-                            <td >
+                            <td>
                                 <a class="x-a" href="/" target="_blank">新版x-admin 2.0上线了</a>
                             </td>
                         </tr>
                         <tr>
-                            <td >
+                            <td>
                                 <a class="x-a" href="/" target="_blank">交流qq群:(519492808)</a>
                             </td>
                         </tr>

@@ -18,8 +18,8 @@ import cn.angelbell.oa.entity.TeacherExample;
  */
 @Service
 public interface TeacherService {
+	
 	/**
-     * 
      * @Title: getTeacherTypeList
      * @Description: 从数据库中获取全部教师信息
      * @throws Exception
@@ -51,4 +51,12 @@ public interface TeacherService {
      * @throws Exception
      */
     PageInfo<Teacher> selectByExample(Integer pageNum, Integer pageSize,TeacherExample example) throws Exception;
+    
+    /**
+     * @Title: selectCount
+     * @Description: 查询教师数量
+     * @param 
+     * @throws Exception
+     */
+    Integer selectCount() throws Exception;
 }

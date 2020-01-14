@@ -1,0 +1,3 @@
+2019-12-24 17:01:49.737 logback [http-nio-8090-exec-9] INFO  c.a.o.c.student.StudentController - 
+2019-12-24 17:01:49.839 logback [http-nio-8090-exec-9] INFO  c.a.o.c.student.StudentController - start
+2019-12-24 17:01:49.839 logback [http-nio-8090-exec-9] INFO  c.a.o.c.student.StudentController - 获取全部学生信息

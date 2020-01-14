@@ -1,51 +1,51 @@
-2019-10-04 15:17:13.937 logback [restartedMain] DEBUG o.s.b.l.ClasspathLoggingApplicationListener - Application started with classpath: [file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/]
-2019-10-04 15:17:14.012 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Starting AngelApplication on DESKTOP-HREPCV6 with PID 20100 (E:\AngelBell\version_2.1.1\AngelBell-master\target\classes started by 管理员 in E:\AngelBell\version_2.1.1\AngelBell-master)
-2019-10-04 15:17:14.013 logback [restartedMain] DEBUG cn.angelbell.oa.AngelApplication - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
-2019-10-04 15:17:14.013 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - No active profile set, falling back to default profiles: default
-2019-10-04 15:17:14.014 logback [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class cn.angelbell.oa.AngelApplication
-2019-10-04 15:17:14.211 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Loaded config file 'file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/application.yml' (classpath:/application.yml)
-2019-10-04 15:17:14.211 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Skipped (empty) config file 'file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/application.yml' (classpath:/application.yml) for profile default
-2019-10-04 15:17:14.212 logback [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e7411ae: startup date [Fri Oct 04 15:17:14 CST 2019]; root of context hierarchy
-2019-10-04 15:17:14.214 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Bean factory for org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e7411ae: org.springframework.beans.factory.support.DefaultListableBeanFactory@77189652: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,angelApplication]; root of factory hierarchy
-2019-10-04 15:17:16.797 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@a632b53]
-2019-10-04 15:17:16.797 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@196c4653]
-2019-10-04 15:17:17.154 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: E:\maven\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
-2019-10-04 15:17:17.154 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: E:\maven\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
-2019-10-04 15:17:17.154 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Document root: E:\AngelBell\version_2.1.1\AngelBell-master\src\main\webapp
-2019-10-04 15:17:17.239 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
-2019-10-04 15:17:17.383 logback [localhost-startStop-1] INFO  cn.angelbell.oa.config.FilterConfig - 注册过滤器, 过滤器name: KeywordHandleFilter, 过滤器order: 3, 过滤器过滤url: [/]
-2019-10-04 15:17:17.583 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'registerKeywordHandleFilter'; order=3, resource=class path resource [cn/angelbell/oa/config/FilterConfig.class]
-2019-10-04 15:17:17.584 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'druidServlet'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
-2019-10-04 15:17:17.584 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'filterRegistrationBean'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
-2019-10-04 15:17:17.584 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
-2019-10-04 15:17:17.666 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]
-2019-10-04 15:17:17.666 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'myFilter'; order=2147483647, resource=file [E:\AngelBell\version_2.1.1\AngelBell-master\target\classes\cn\angelbell\oa\filter\MyFilter.class]
-2019-10-04 15:17:17.666 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'shirFilter'; order=2147483647, resource=class path resource [cn/angelbell/oa/shiro/ShiroConfig.class]
-2019-10-04 15:17:17.675 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
-2019-10-04 15:17:17.676 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'KeywordHandleFilter' to urls: [/]
-2019-10-04 15:17:17.677 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
-2019-10-04 15:17:17.677 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'myFilter' to: [/*]
-2019-10-04 15:17:17.677 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'shirFilter' to: [/*]
-2019-10-04 15:17:17.677 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
-2019-10-04 15:17:17.679 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
-2019-10-04 15:17:17.704 logback [localhost-startStop-1] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter初始化
-2019-10-04 15:17:17.705 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Initializing filter 'characterEncodingFilter'
-2019-10-04 15:17:17.706 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured successfully
-2019-10-04 15:17:18.239 logback [restartedMain] INFO  cn.angelbell.oa.config.WebConfig - 配置静态资源所在目录
-2019-10-04 15:17:18.969 logback [restartedMain] DEBUG o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
-2019-10-04 15:17:19.646 logback [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
-2019-10-04 15:17:19.906 logback [restartedMain] DEBUG o.s.b.d.livereload.LiveReloadServer - Starting live reload server on port 35729
-2019-10-04 15:17:19.907 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-2019-10-04 15:17:19.984 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@4c6d0363]
-2019-10-04 15:17:20.041 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
-2019-10-04 15:17:20.045 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
-2019-10-04 15:17:20.046 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
-2019-10-04 15:17:20.046 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@56ee5251
-2019-10-04 15:17:20.046 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application cn.angelbell.oa.AngelApplication with URLs [file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/]
-2019-10-04 15:17:20.046 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Started AngelApplication in 6.441 seconds (JVM running for 7.508)
-2019-10-04 15:17:29.903 logback [http-nio-8080-exec-1] WARN  o.a.s.mgt.AbstractRememberMeManager - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
-2019-10-04 15:17:29.906 logback [http-nio-8080-exec-1] WARN  o.a.shiro.mgt.DefaultSecurityManager - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
-org.apache.shiro.crypto.CryptoException: Unable to execute 'doFinal' with cipher instance [javax.crypto.Cipher@4d1e4f63].
+2020-01-14 09:00:15.824 logback [restartedMain] DEBUG o.s.b.l.ClasspathLoggingApplicationListener - Application started with classpath: [file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/]
+2020-01-14 09:00:16.009 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Starting AngelApplication on DESKTOP-HREPCV6 with PID 11284 (E:\AngelBell\version_2.1.1\AngelBell-master\target\classes started by 管理员 in E:\AngelBell\version_2.1.1\AngelBell-master)
+2020-01-14 09:00:16.009 logback [restartedMain] DEBUG cn.angelbell.oa.AngelApplication - Running with Spring Boot v1.5.6.RELEASE, Spring v4.3.10.RELEASE
+2020-01-14 09:00:16.010 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - No active profile set, falling back to default profiles: default
+2020-01-14 09:00:16.010 logback [restartedMain] DEBUG o.s.boot.SpringApplication - Loading source class cn.angelbell.oa.AngelApplication
+2020-01-14 09:00:16.329 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Loaded config file 'file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/application.yml' (classpath:/application.yml)
+2020-01-14 09:00:16.329 logback [restartedMain] DEBUG o.s.b.c.c.ConfigFileApplicationListener - Skipped (empty) config file 'file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/application.yml' (classpath:/application.yml) for profile default
+2020-01-14 09:00:16.330 logback [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39df0511: startup date [Tue Jan 14 09:00:16 CST 2020]; root of context hierarchy
+2020-01-14 09:00:16.332 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Bean factory for org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@39df0511: org.springframework.beans.factory.support.DefaultListableBeanFactory@4dcf272b: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.event.internalEventListenerProcessor,org.springframework.context.event.internalEventListenerFactory,angelApplication]; root of factory hierarchy
+2020-01-14 09:00:18.926 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@32210fc6]
+2020-01-14 09:00:18.926 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@204d3a8e]
+2020-01-14 09:00:19.336 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: E:\maven\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
+2020-01-14 09:00:19.336 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Code archive: E:\maven\maven-repository\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar
+2020-01-14 09:00:19.336 logback [restartedMain] DEBUG o.s.b.c.e.t.TomcatEmbeddedServletContainerFactory - Document root: E:\AngelBell\version_2.1.1\AngelBell-master\src\main\webapp
+2020-01-14 09:00:19.404 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8090 (http)
+2020-01-14 09:00:19.501 logback [localhost-startStop-1] INFO  cn.angelbell.oa.config.FilterConfig - 注册过滤器, 过滤器name: KeywordHandleFilter, 过滤器order: 3, 过滤器过滤url: [/]
+2020-01-14 09:00:19.674 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'registerKeywordHandleFilter'; order=3, resource=class path resource [cn/angelbell/oa/config/FilterConfig.class]
+2020-01-14 09:00:19.675 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'druidServlet'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2020-01-14 09:00:19.675 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Filter initializer bean 'filterRegistrationBean'; order=2147483647, resource=cn.angelbell.oa.AngelApplication
+2020-01-14 09:00:19.675 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2020-01-14 09:00:19.717 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/HttpEncodingAutoConfiguration.class]
+2020-01-14 09:00:19.718 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'myFilter'; order=2147483647, resource=file [E:\AngelBell\version_2.1.1\AngelBell-master\target\classes\cn\angelbell\oa\filter\MyFilter.class]
+2020-01-14 09:00:19.718 logback [localhost-startStop-1] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Created Filter initializer for bean 'shirFilter'; order=2147483647, resource=class path resource [cn/angelbell/oa/shiro/ShiroConfig.class]
+2020-01-14 09:00:19.724 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-01-14 09:00:19.725 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'KeywordHandleFilter' to urls: [/]
+2020-01-14 09:00:19.725 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'webStatFilter' to urls: [/*]
+2020-01-14 09:00:19.725 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'myFilter' to: [/*]
+2020-01-14 09:00:19.725 logback [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'shirFilter' to: [/*]
+2020-01-14 09:00:19.725 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'statViewServlet' to [/druid/*]
+2020-01-14 09:00:19.726 logback [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2020-01-14 09:00:19.744 logback [localhost-startStop-1] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter初始化
+2020-01-14 09:00:19.744 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Initializing filter 'characterEncodingFilter'
+2020-01-14 09:00:19.745 logback [localhost-startStop-1] DEBUG o.s.b.w.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured successfully
+2020-01-14 09:00:20.289 logback [restartedMain] INFO  cn.angelbell.oa.config.WebConfig - 配置静态资源所在目录
+2020-01-14 09:00:20.845 logback [restartedMain] DEBUG o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
+2020-01-14 09:00:21.347 logback [restartedMain] WARN  o.t.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-01-14 09:00:21.551 logback [restartedMain] DEBUG o.s.b.d.livereload.LiveReloadServer - Starting live reload server on port 35729
+2020-01-14 09:00:21.553 logback [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-01-14 09:00:21.603 logback [restartedMain] DEBUG o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@481e6ed7]
+2020-01-14 09:00:21.652 logback [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8090 (http)
+2020-01-14 09:00:21.656 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Creating new Restarter for thread Thread[main,5,main]
+2020-01-14 09:00:21.656 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Immediately restarting application
+2020-01-14 09:00:21.656 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Created RestartClassLoader org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1201590f
+2020-01-14 09:00:21.656 logback [restartedMain] DEBUG o.s.boot.devtools.restart.Restarter - Starting application cn.angelbell.oa.AngelApplication with URLs [file:/E:/AngelBell/version_2.1.1/AngelBell-master/target/classes/]
+2020-01-14 09:00:21.657 logback [restartedMain] INFO  cn.angelbell.oa.AngelApplication - Started AngelApplication in 6.186 seconds (JVM running for 7.69)
+2020-01-14 09:00:29.603 logback [http-nio-8090-exec-1] WARN  o.a.s.mgt.AbstractRememberMeManager - There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key, if you are using a shiro.ini file, this property would be 'securityManager.rememberMeManager.cipherKey' see: http://shiro.apache.org/web.html#Web-RememberMeServices. The remembered identity will be forgotten and not used for this request.
+2020-01-14 09:00:29.606 logback [http-nio-8090-exec-1] WARN  o.a.shiro.mgt.DefaultSecurityManager - Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.crypto.CryptoException: Unable to execute 'doFinal' with cipher instance [javax.crypto.Cipher@3409e764].
 	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:462)
 	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:445)
 	at org.apache.shiro.crypto.JcaCipherService.decrypt(JcaCipherService.java:390)
@@ -96,16 +96,19 @@ Caused by: javax.crypto.BadPaddingException: Given final block not properly padd
 	at javax.crypto.Cipher.doFinal(Cipher.java:2165)
 	at org.apache.shiro.crypto.JcaCipherService.crypt(JcaCipherService.java:459)
 	... 42 common frames omitted
-2019-10-04 15:17:29.928 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - 
-2019-10-04 15:17:29.929 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - start
-2019-10-04 15:17:29.929 logback [http-nio-8080-exec-1] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
-2019-10-04 15:17:30.332 logback [http-nio-8080-exec-4] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/userLogin;jsessionid=46ED3D2C4E64E1C788B847B20C419D81] in DispatcherServlet with name 'dispatcherServlet'
-2019-10-04 15:17:31.280 logback [http-nio-8080-exec-2] INFO  c.a.o.c.user.LoginController - 
-2019-10-04 15:17:31.281 logback [http-nio-8080-exec-2] INFO  c.a.o.c.user.LoginController - start
-2019-10-04 15:17:31.281 logback [http-nio-8080-exec-2] INFO  c.a.o.c.user.LoginController - 登录验证
-2019-10-04 15:17:33.960 logback [http-nio-8080-exec-1] INFO  c.a.o.c.leader.LeaderController - 
-2019-10-04 15:17:33.961 logback [http-nio-8080-exec-1] INFO  c.a.o.c.leader.LeaderController - start
-2019-10-04 15:17:33.961 logback [http-nio-8080-exec-1] INFO  c.a.o.c.leader.LeaderController - 获取全部领导信息
-2019-10-04 15:17:47.923 logback [RMI TCP Connection(2)-192.168.42.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
-2019-10-04 15:17:47.923 logback [RMI TCP Connection(2)-192.168.42.1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e7411ae: startup date [Fri Oct 04 15:17:14 CST 2019]; root of context hierarchy
-2019-10-04 15:17:48.257 logback [localhost-startStop-2] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter銷毀
+2020-01-14 09:00:29.641 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 
+2020-01-14 09:00:29.641 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - start
+2020-01-14 09:00:29.641 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
+2020-01-14 09:00:30.158 logback [http-nio-8090-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping found for HTTP request with URI [/login/userLogin;jsessionid=C54C51FE27B19328AB838C135EE2568E] in DispatcherServlet with name 'dispatcherServlet'
+2020-01-14 09:00:32.770 logback [http-nio-8090-exec-5] INFO  c.a.o.c.user.LoginController - 
+2020-01-14 09:00:32.770 logback [http-nio-8090-exec-5] INFO  c.a.o.c.user.LoginController - start
+2020-01-14 09:00:32.770 logback [http-nio-8090-exec-5] INFO  c.a.o.c.user.LoginController - 登录验证
+2020-01-14 09:00:33.600 logback [http-nio-8090-exec-2] INFO  c.a.o.controller.user.UserController - 
+2020-01-14 09:00:33.600 logback [http-nio-8090-exec-2] INFO  c.a.o.controller.user.UserController - start
+2020-01-14 09:00:33.600 logback [http-nio-8090-exec-2] INFO  c.a.o.controller.user.UserController - 获取当前登录用户名
+2020-01-14 09:00:36.807 logback [http-nio-8090-exec-3] INFO  c.a.oa.controller.EchartsController - 
+2020-01-14 09:00:36.807 logback [http-nio-8090-exec-3] INFO  c.a.oa.controller.EchartsController - start
+2020-01-14 09:00:36.807 logback [http-nio-8090-exec-3] INFO  c.a.oa.controller.EchartsController - 跳转至访问量热力图
+2020-01-14 09:00:37.222 logback [http-nio-8090-exec-2] INFO  c.a.oa.controller.EchartsController - 
+2020-01-14 09:00:37.222 logback [http-nio-8090-exec-2] INFO  c.a.oa.controller.EchartsController - start
+2020-01-14 09:00:37.222 logback [http-nio-8090-exec-2] INFO  c.a.oa.controller.EchartsController - 获取热力图数据信息

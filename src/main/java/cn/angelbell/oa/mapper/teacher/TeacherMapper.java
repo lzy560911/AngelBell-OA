@@ -96,11 +96,18 @@ public interface TeacherMapper {
     int updateByPrimaryKey(Teacher record);
     
     /**
-     * 
      * @Title: getList
-     * @Description: 获取所有用户列表
+     * @Description: 获取所有教师列表
      * @return
      * @throws Exception
      */
     List<Teacher> getList() throws Exception;
+    
+    /**
+     * @Title: count
+     * @Description: 获取教师数量
+     * @return
+     * @throws Exception
+     */
+    int count() throws Exception;
 }

@@ -1,0 +1,6 @@
+2020-01-10 14:49:52.478 logback [http-nio-8090-exec-8] INFO  c.a.oa.controller.EchartsController - 
+2020-01-10 14:49:52.483 logback [http-nio-8090-exec-8] INFO  c.a.oa.controller.EchartsController - start
+2020-01-10 14:49:52.483 logback [http-nio-8090-exec-8] INFO  c.a.oa.controller.EchartsController - 跳转至访问量热力图
+2020-01-10 14:49:52.944 logback [http-nio-8090-exec-9] INFO  c.a.oa.controller.EchartsController - 
+2020-01-10 14:49:52.944 logback [http-nio-8090-exec-9] INFO  c.a.oa.controller.EchartsController - start
+2020-01-10 14:49:52.944 logback [http-nio-8090-exec-9] INFO  c.a.oa.controller.EchartsController - 获取热力图数据信息

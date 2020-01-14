@@ -1,0 +1,3 @@
+2020-01-13 17:34:50.757 logback [RMI TCP Connection(2)-192.168.42.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2020-01-13 17:34:50.762 logback [RMI TCP Connection(2)-192.168.42.1] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@739c7207: startup date [Mon Jan 13 13:39:29 CST 2020]; root of context hierarchy
+2020-01-13 17:34:51.482 logback [localhost-startStop-2] INFO  c.a.oa.filter.KeywordHandleFilter - KeywordHandleFilter銷毀

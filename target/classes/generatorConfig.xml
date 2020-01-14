@@ -29,7 +29,13 @@
         <javaClientGenerator type="XMLMAPPER" targetPackage="cn.angelbell.oa.mapper"  targetProject="src\main\java"/>
 		<!-- 要自动生成的表，可配置多个 -->
         
-        <table tableName="leader_info" domainObjectName="Leader">
+        <!-- <table tableName="parent_info" domainObjectName="Parent">
+            <generatedKey column="id" sqlStatement="MySql"/>
+        </table>
+        <table tableName="student_info" domainObjectName="Student">
+            <generatedKey column="id" sqlStatement="MySql"/>
+        </table> -->
+        <table tableName="visitnet" domainObjectName="Visitnet">
             <generatedKey column="id" sqlStatement="MySql"/>
         </table>
     </context>

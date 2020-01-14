@@ -2,7 +2,6 @@ package cn.angelbell.oa.controller.leader;
 
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,11 +21,7 @@ import com.github.pagehelper.PageInfo;
 import cn.angelbell.oa.controller.BaseController;
 import cn.angelbell.oa.entity.Leader;
 import cn.angelbell.oa.entity.LeaderExample;
-import cn.angelbell.oa.entity.Teacher;
-import cn.angelbell.oa.entity.TeacherExample;
 import cn.angelbell.oa.service.leader.LeaderService;
-import cn.angelbell.oa.service.teacher.TeacherService;
-import cn.angelbell.oa.util.PageData;
 import cn.angelbell.oa.util.Tools;
 
 

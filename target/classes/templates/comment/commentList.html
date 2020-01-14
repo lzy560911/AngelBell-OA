@@ -1,0 +1,197 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>欢迎页面-X-admin2.1</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="/static/css/font.css">
+    <link rel="stylesheet" href="/static/css/xadmin.css">
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/js/xadmin.js"></script>
+    <script type="text/javascript" src="/static/js/cookie.js"></script>
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="x-nav">
+      <span class="layui-breadcrumb">
+        <a href="">首页</a>
+        <a href="">学生评价列表</a>
+      </span>
+      <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
+        <i class="layui-icon" style="line-height:30px">ဂ</i></a>
+    </div>
+    <div class="x-body">
+      <div class="layui-row">
+      <!--   -->
+        <form class="layui-form layui-col-md12 x-so" id="login-form-hooks" action="/comment/selectByExample">
+          <input class="layui-input"  autocomplete="off" placeholder="开始日" name="start" id="start">
+          <input class="layui-input"  autocomplete="off" placeholder="截止日" name="end" id="end">
+          <input type="text" name="commentator" id="commentator"  placeholder="请输入评价教师姓名" autocomplete="off" class="layui-input">
+          <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+        </form>
+      </div>
+      <xblock>
+        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
+        <button class="layui-btn" onclick="x_admin_show('添加教师信息','/comment/add',600,600)"><i class="layui-icon"></i>添加</button>
+        <span class="x-right" style="line-height:40px">共有数据：88 条</span>
+      </xblock>
+      <table class="layui-table x-admin">
+        <thead>
+          <tr>
+            <th>
+              <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
+            </th>
+            <th>编号</th>
+            <th>学生姓名</th>
+            <th>评价等级</th>
+            <th>评价内容</th>
+            <th>点评人</th>
+            <th>点评时间</th>
+            <th>操作</th></tr>
+        </thead>
+        <tbody th:remove="all-but-first">
+          <tr th:each="comment:${pageInfo.list}">
+            <td>
+              <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
+            </td>
+            <td th:text="${comment.getCommentId()}"></td>
+            <td th:text="${comment.getName()}"></td>
+            <td th:text="${comment.getGrade()}"></td>
+            <td th:text="${comment.getContent()}"></td>
+            <td th:text="${comment.getCommentator()}"></td>
+            <td th:text="${#dates.format(comment.getIntime(), 'yyyy-MM-dd HH:mm')}"></td>
+            <td class="td-manage">
+              <a title="编辑"  onclick="x_admin_show('编辑','member-edit.html',600,400)" href="javascript:;">
+                <i class="layui-icon">&#xe642;</i>
+              </a>
+             <a title="删除" th:onclick="'javascript:member_del(\''+${comment.getCommentId()}+'\')'" href="javascript:;">
+                <i class="layui-icon">&#xe640;</i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="page">
+        <div>
+          <a class="prev" href="/comment/list?pageNum=1">首页</a>
+          <a class="prev" th:href="'/comment/list?pageNum='+${pageInfo.prePage}">&lt;&lt;</a>
+          <!-- <a class="num" href="">1</a>
+          <span class="current">2</span>
+          <a class="num" href="">3</a>
+          <a class="num" href="">489</a> -->
+          <td width="10%" th:each="nav: ${pageInfo.navigatepageNums}">
+                <a th:href="'/comment/list?pageNum='+${nav}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}"></a>
+                <span class="current" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+          </td>
+          <a class="next" th:href="'/comment/list?pageNum='+${pageInfo.nextPage}">&gt;&gt;</a>
+          <a class="prev" th:href="'/comment/list?pageNum='+${pageInfo.pages}">尾页</a>      
+        </div>
+      </div>
+    </div>
+    <script th:inline="none">
+      layui.use('laydate', function(){
+        var laydate = layui.laydate;
+        
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#start' //指定元素
+        });
+
+        //执行一个laydate实例
+        laydate.render({
+          elem: '#end' //指定元素
+        });
+      });
+
+       /*用户-停用*/
+      function member_stop(obj,id){
+          layer.confirm('确认要停用吗？',function(index){
+
+              if($(obj).attr('title')=='启用'){
+
+                //发异步把用户状态进行更改
+                $(obj).attr('title','停用')
+                $(obj).find('i').html('&#xe62f;');
+
+                $(obj).parents("tr").find(".td-status").find('span').addClass('layui-btn-disabled').html('已停用');
+                layer.msg('已停用!',{icon: 5,time:1000});
+
+              }else{
+                $(obj).attr('title','启用')
+                $(obj).find('i').html('&#xe601;');
+
+                $(obj).parents("tr").find(".td-status").find('span').removeClass('layui-btn-disabled').html('已启用');
+                layer.msg('已启用!',{icon: 5,time:1000});
+              }
+              
+          });
+      }
+
+      /*用户-删除*/
+      function member_del(id){
+          layer.confirm('确认要删除吗？',function(index){
+              //发异步删除数据
+              $.ajax({
+	             url:"/comment/delCommentInfo",
+	             type : 'get',
+	             cache : false,
+	             async : true,
+	             dataType : "jsonp",
+	             timeout:30000,
+	             jsonpCallback:"callback",
+	             data:{
+	                 commentID:id,
+	             },
+	             success: function(jsonData){
+		          	 layer.msg('已删除!',{icon:1,time:1000});
+		          	 ocation.reload();
+		         },
+				error: function(XMLHttpRequest, textStatus, errorThrown) {
+				       console.log("状态码："+XMLHttpRequest.status);//状态码
+				       console.log("状态："+XMLHttpRequest.readyState);//状态
+				       console.log("错误信息："+textStatus);//错误信息
+				}
+         	});
+          });
+      }
+      
+      function delAll (argument) {
+        var data = tableCheck.getData();
+        layer.confirm('确认要删除吗？'+data,function(index){
+            //捉到所有被选中的，发异步进行删除
+            layer.msg('删除成功', {icon: 1});
+            $(".layui-form-checked").not('.header').parents('tr').remove();
+        });
+      }
+      
+      layui.use(['form','layer'], function(){
+            $ = layui.jquery;
+          var form = layui.form
+          ,layer = layui.layer;
+        
+          //自定义验证规则
+          form.verify({
+            end: function(value){
+              if($('#start').val() == null){
+                return '起始日期不能为空哦';
+              }
+            }
+            ,teacherName:[/^[\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}$/,'姓名输入有误']
+          });
+          //监听提交
+          form.on('submit(sreach)', function(data){
+              	document.getElementById("login-form-hooks").submit();
+          });
+        });
+    </script>
+  </body>
+
+</html>

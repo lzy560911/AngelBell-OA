@@ -61,23 +61,23 @@
             <th>操作</th></tr>
         </thead>
         <tbody th:remove="all-but-first">
-          <tr th:each="user:${user}">
+          <tr th:each="user:${pageInfo.list}">
             <td>
               <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
             </td>
-            <td th:text="${user.getUserId()}">1</td>
-            <td th:text="${user.getUsername()}">小明</td>
-            <td th:text="${user.getRealname()}">男</td>
+            <td th:text="${user.getUserId()}"></td>
+            <td th:text="${user.getUsername()}"></td>
+            <td th:text="${user.getRealname()}"></td>
             <td th:switch="${user.getSex()}">
             	<span th:case="1">男</span>
 	            <span th:case="2">女</span>
             </td>
-            <td th:text="${user.getEmail()}">admin@mail.com</td>
-            <td th:text="${user.getPhone()}">北京市 海淀区</td>
-            <td th:text="${#dates.format(user.getCtime(), 'yyyy-MM-dd HH:mm')}">2017-01-01 11:11:42</td>
+            <td th:text="${user.getEmail()}"></td>
+            <td th:text="${user.getPhone()}"></td>
+            <td th:text="${#dates.format(user.getCtime(), 'yyyy-MM-dd HH:mm')}"></td>
             <td class="td-status" th:switch="${user.getLocked()}">
-              <span class="layui-btn layui-btn-normal layui-btn-mini" th:case="0">已启用</span>
-              <span class="layui-btn layui-btn-normal layui-btn-mini" th:case="1">已停用</span>
+              <span class="layui-btn layui-btn-normal layui-btn-mini" th:case="0">正常</span>
+              <span class="layui-btn layui-btn-normal layui-btn-mini" th:case="1">已锁定</span>
             </td>
             <td class="td-manage">
              <!--  <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
@@ -98,16 +98,18 @@
       </table>
       <div class="page">
         <div>
-          <c:if test="${pageInfo.hasPreviousPage}">  
-          	<a class="prev" href="/teacher/list?pageNum=${pageInfo.pageNum-1}">&lt;&lt;</a>
-          </c:if>
-          <a class="num" href="">1</a>
+          <a class="prev" href="/user/list?pageNum=1">首页</a>
+          <a class="prev" th:href="'/user/list?pageNum='+${pageInfo.prePage}">&lt;&lt;</a>
+          <!-- <a class="num" href="">1</a>
           <span class="current">2</span>
           <a class="num" href="">3</a>
-          <a class="num" href="">489</a>
-          <c:if test="${pageInfo.hasNextPage}">  
-          	<a class="next" href="/teacher/list?pageNum=${pageInfo.pageNum+1}">&gt;&gt;</a>
-          </c:if>  
+          <a class="num" href="">489</a> -->
+          <td width="10%" th:each="nav: ${pageInfo.navigatepageNums}">
+                <a th:href="'/user/list?pageNum='+${nav}" th:text="${nav}" th:if="${nav != pageInfo.pageNum}"></a>
+                <span class="current" th:if="${nav == pageInfo.pageNum}" th:text="${nav}"></span>
+          </td>
+          <a class="next" th:href="'/user/list?pageNum='+${pageInfo.nextPage}">&gt;&gt;</a>
+          <a class="prev" th:href="'/user/list?pageNum='+${pageInfo.pages}">尾页</a>      
         </div>
       </div>
 

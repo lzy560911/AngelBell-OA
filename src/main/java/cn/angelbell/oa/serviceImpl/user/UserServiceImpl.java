@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+
 import cn.angelbell.oa.entity.User;
 import cn.angelbell.oa.mapper.user.UserMapper;
 import cn.angelbell.oa.service.user.UserService;
@@ -29,11 +32,14 @@ public class UserServiceImpl implements UserService{
     private UserMapper userDao;
 
 	@Override
-	public List<User> getUsersTypeList() throws Exception {
+	public PageInfo<User> getUsersTypeList(Integer pageNum, Integer pageSize) throws Exception {
 		// TODO Auto-generated method stub
-		List<User> list = new ArrayList<>();
+		//默认每页15条信息
+		List<User> list = new ArrayList<User>();
+		PageHelper.startPage(pageNum,pageSize);
 		list = userDao.getList();
-		return list;
+		PageInfo<User> userDaoPageInfo = new PageInfo<User>(list);
+		return userDaoPageInfo;
 	}
 
 	@Override

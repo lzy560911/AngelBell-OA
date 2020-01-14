@@ -1,0 +1,9 @@
+2019-12-29 15:16:10.617 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 
+2019-12-29 15:16:10.714 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - start
+2019-12-29 15:16:10.714 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
+2019-12-29 15:16:39.831 logback [http-nio-8090-exec-3] INFO  c.a.o.c.user.LoginController - 
+2019-12-29 15:16:39.831 logback [http-nio-8090-exec-3] INFO  c.a.o.c.user.LoginController - start
+2019-12-29 15:16:39.831 logback [http-nio-8090-exec-3] INFO  c.a.o.c.user.LoginController - 登录验证
+2019-12-29 15:16:40.740 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - 
+2019-12-29 15:16:40.740 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - start
+2019-12-29 15:16:40.741 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - 获取当前登录用户名

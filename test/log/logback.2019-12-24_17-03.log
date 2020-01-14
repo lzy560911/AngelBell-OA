@@ -1,0 +1,9 @@
+2019-12-24 17:03:10.329 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 
+2019-12-24 17:03:10.425 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - start
+2019-12-24 17:03:10.425 logback [http-nio-8090-exec-1] INFO  c.a.o.c.user.LoginController - 登录验证
+2019-12-24 17:03:11.128 logback [http-nio-8090-exec-3] INFO  c.a.o.c.comment.CommentController - 
+2019-12-24 17:03:11.128 logback [http-nio-8090-exec-3] INFO  c.a.o.c.comment.CommentController - start
+2019-12-24 17:03:11.128 logback [http-nio-8090-exec-3] INFO  c.a.o.c.comment.CommentController - 获取全部评论信息
+2019-12-24 17:03:11.131 logback [http-nio-8090-exec-4] INFO  c.a.o.c.student.StudentController - 
+2019-12-24 17:03:11.131 logback [http-nio-8090-exec-4] INFO  c.a.o.c.student.StudentController - start
+2019-12-24 17:03:11.134 logback [http-nio-8090-exec-4] INFO  c.a.o.c.student.StudentController - 获取全部学生信息

@@ -1,0 +1,6 @@
+2019-12-30 14:42:18.564 logback [http-nio-8090-exec-7] INFO  c.a.o.controller.user.UserController - 
+2019-12-30 14:42:18.566 logback [http-nio-8090-exec-7] INFO  c.a.o.controller.user.UserController - start
+2019-12-30 14:42:18.566 logback [http-nio-8090-exec-7] INFO  c.a.o.controller.user.UserController - 获取当前登录用户名
+2019-12-30 14:42:45.551 logback [http-nio-8090-exec-1] INFO  c.a.o.controller.user.UserController - 
+2019-12-30 14:42:45.553 logback [http-nio-8090-exec-1] INFO  c.a.o.controller.user.UserController - start
+2019-12-30 14:42:45.554 logback [http-nio-8090-exec-1] INFO  c.a.o.controller.user.UserController - 获取当前登录用户名

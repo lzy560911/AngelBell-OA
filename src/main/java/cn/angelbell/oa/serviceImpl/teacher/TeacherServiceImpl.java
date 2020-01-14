@@ -66,4 +66,11 @@ public class TeacherServiceImpl implements TeacherService{
 		PageInfo<Teacher> TeacherPageInfo = new PageInfo<Teacher>(list);
 		return TeacherPageInfo;
 	}
+
+	@Override
+	public Integer selectCount() throws Exception {
+		// TODO Auto-generated method stub
+		int teacherNum = teacherMapper.count();
+		return teacherNum;
+	}
 }

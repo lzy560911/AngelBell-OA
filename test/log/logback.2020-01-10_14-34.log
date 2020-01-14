@@ -1,0 +1,12 @@
+2020-01-10 14:34:48.011 logback [http-nio-8090-exec-6] INFO  c.a.o.c.user.LoginController - 
+2020-01-10 14:34:48.012 logback [http-nio-8090-exec-6] INFO  c.a.o.c.user.LoginController - start
+2020-01-10 14:34:48.012 logback [http-nio-8090-exec-6] INFO  c.a.o.c.user.LoginController - 跳转到登录页面
+2020-01-10 14:34:53.739 logback [http-nio-8090-exec-9] INFO  c.a.o.c.user.LoginController - 
+2020-01-10 14:34:53.740 logback [http-nio-8090-exec-9] INFO  c.a.o.c.user.LoginController - start
+2020-01-10 14:34:53.740 logback [http-nio-8090-exec-9] INFO  c.a.o.c.user.LoginController - 登录验证
+2020-01-10 14:34:53.850 logback [http-nio-8090-exec-4] INFO  c.a.oa.controller.EchartsController - 
+2020-01-10 14:34:53.850 logback [http-nio-8090-exec-4] INFO  c.a.oa.controller.EchartsController - start
+2020-01-10 14:34:53.850 logback [http-nio-8090-exec-4] INFO  c.a.oa.controller.EchartsController - 跳转至访问量热力图
+2020-01-10 14:34:53.879 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - 
+2020-01-10 14:34:53.879 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - start
+2020-01-10 14:34:53.879 logback [http-nio-8090-exec-10] INFO  c.a.o.controller.user.UserController - 获取当前登录用户名

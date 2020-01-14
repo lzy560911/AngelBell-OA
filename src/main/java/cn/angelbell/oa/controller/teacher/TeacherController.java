@@ -2,7 +2,6 @@ package cn.angelbell.oa.controller.teacher;
 
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +22,6 @@ import cn.angelbell.oa.controller.BaseController;
 import cn.angelbell.oa.entity.Teacher;
 import cn.angelbell.oa.entity.TeacherExample;
 import cn.angelbell.oa.service.teacher.TeacherService;
-import cn.angelbell.oa.util.PageData;
 import cn.angelbell.oa.util.Tools;
 
 
@@ -39,7 +37,7 @@ public class TeacherController extends BaseController{
 	
 	@Autowired
 	private TeacherService teacherService;
-	
+
 	/**
 	 * 获取全部教师信息.
 	 * Integer pageNum, Integer pageSize

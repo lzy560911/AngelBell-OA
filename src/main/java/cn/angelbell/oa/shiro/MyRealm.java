@@ -1,6 +1,5 @@
 package cn.angelbell.oa.shiro;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,8 +29,8 @@ import cn.angelbell.oa.service.user.UserService;
  * 
  * @ClassName: MyRealm
  * @Description: 自定义realm
- * @author cheng
- * @date 2017年10月9日 上午10:54:00
+ * @author liziye
+ * @date 2019年10月9日 上午10:54:00
  */
 public class MyRealm extends AuthorizingRealm {
 	

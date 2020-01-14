@@ -1,21 +1,28 @@
 package cn.angelbell.oa.controller.user;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.github.pagehelper.PageInfo;
 
 import cn.angelbell.oa.controller.BaseController;
 import cn.angelbell.oa.entity.User;
 import cn.angelbell.oa.service.user.UserService;
 import cn.angelbell.oa.util.AppUtil;
+import cn.angelbell.oa.util.Const;
 import cn.angelbell.oa.util.PageData;
 
 /**
@@ -36,13 +43,16 @@ public class UserController extends BaseController{
 	 * 获取全部用户信息.
 	 */
 	@RequestMapping(value="/list")  
-    public ModelAndView userLogin() throws Exception{
+    public ModelAndView userLogin(Integer pageNum, Integer pageSize) throws Exception{
+		System.out.println("this is the user list");
 		logBefore(logger, "获取全部用户信息");
-		List<User> list = new ArrayList<User>();
-		list = userService.getUsersTypeList();
+		if(pageSize == null){
+			pageSize = 15;
+		}
+		PageInfo<User> pageInfoUser = userService.getUsersTypeList(pageNum,pageSize);
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("user/userList");
-		mv.addObject("user", list);
+		mv.addObject("pageInfo", pageInfoUser);
 		return mv;
     }
 	
@@ -98,5 +108,19 @@ public class UserController extends BaseController{
 		map.put("result", errInfo);
 		map.put("msg", msg);
 		return AppUtil.returnObject(new PageData(), map);
+	}
+	
+	/**
+	 * 获取页面用户姓名
+	 */
+	@RequestMapping(value="/getUserName",method = RequestMethod.GET ,produces="application/json;charset=UTF-8,text/html;charset=UTF-8")
+	@ResponseBody
+	public JSONPObject getUserName(HttpSession session, HttpServletRequest request,@RequestParam String callback) throws Exception{
+		logBefore(logger, "获取当前登录用户名");
+		Map<String, Object> map = new HashMap<String, Object>();
+		User user = (User)session.getAttribute(Const.SESSION_USER);
+		String userName = user.getUsername();
+		map.put("userName", userName);
+		return new JSONPObject(callback, map);
 	}
 }

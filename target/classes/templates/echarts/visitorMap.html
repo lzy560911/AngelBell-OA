@@ -1,0 +1,279 @@
+<!doctype html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>后台登录-X-admin2.1</title>
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="stylesheet" href="/static/css/font.css">
+    	<link rel="stylesheet" href="/static/css/xadmin.css">
+    	<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    	<script type="text/javascript" src="/static/js/echarts/echarts.min.js"></script>
+       	<script type="text/javascript" src="/static/js/echarts/echarts-gl.min.js"></script>
+       	<script type="text/javascript" src="/static/js/echarts/ecStat.min.js"></script>
+       	<script type="text/javascript" src="/static/js/echarts/dataTool.min.js"></script>
+       	<script type="text/javascript" src="/static/js/echarts/china.js"></script>
+       	<script type="text/javascript" src="/static/js/echarts/world.js"></script>
+       	<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=CG6sA9yMCmx9NeESy5j6YtjHeMYvpnMV"></script>
+       	<script type="text/javascript" src="/static/js/echarts/bmap.min.js"></script>
+    </head>
+    <body>
+        <div class="x-body">
+            <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+            <div id="main" style="width: 100%;height:600px;"></div>
+            <blockquote class="layui-elem-quote">
+                各地区访问量热力图，数据仅供参考
+            </blockquote>
+        </div>
+		<script type="text/javascript">
+		   var data = getData();
+		   function getData(){
+		   		var data = [];
+		   		var geoCoordMap = {};
+				$.ajax({
+		            type : 'GET',
+		            url:"/echarts/getVisitorMap",
+	             	cache : false,
+	             	async : true,
+	             	dataType : "jsonp",
+	             	timeout:30000,
+	             	jsonpCallback:"callback",
+		            success : function(result) {
+		                for(var i = 0;i<result.length;i++){
+		                	var list = [];
+			                data.push({
+				                name: result[i].city,
+				                value: result[i].num
+				            });
+				            list.push(getCaption(result[i].locationLat,0));
+				            list.push(getCaption(result[i].locationLat,1));
+				            geoCoordMap[result[i].city] = list;
+		                }
+		                initEcharts(data,geoCoordMap);
+		            },
+		            error : function() {
+		                console.log("请求失败");
+		            }
+	        	});
+			}
+			//截取指定字符前或后的字符串
+			function getCaption(obj,state) {
+			    var index=obj.lastIndexOf("\,");
+			    if(state==0){
+			        obj=obj.substring(0,index);
+			    }else {
+			        obj=obj.substring(index+1,obj.length);
+			    }
+			    return obj;
+			}
+			function initEcharts(data,geoCoordMap){
+				var dom = document.getElementById("main");
+				var myChart = echarts.init(dom);
+				var app = {};
+				option = null;
+				var convertData = function (data) {
+				    var res = [];
+				    for (var i = 0; i < data.length; i++) {
+				        var geoCoord = geoCoordMap[data[i].name];
+				        if (geoCoord) {
+				            res.push({
+				                name: data[i].name,
+				                value: geoCoord.concat(data[i].value)
+				            });
+				        }
+				    }
+				    return res;
+				};
+				option = {
+				    title: {
+				        text: '用户访问量热力图',
+				        subtext: 'user visit heat map',
+				        left: 'center'
+				    },
+				    tooltip : {
+				        trigger: 'item'
+				    },
+				    bmap: {
+				        center: [104.114129, 37.550339],
+				        zoom: 5,
+				        roam: true,
+				        mapStyle: {
+				            styleJson: [{
+				                'featureType': 'water',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#d1d1d1'
+				                }
+				            }, {
+				                'featureType': 'land',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#f3f3f3'
+				                }
+				            }, {
+				                'featureType': 'railway',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'highway',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#fdfdfd'
+				                }
+				            }, {
+				                'featureType': 'highway',
+				                'elementType': 'labels',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'arterial',
+				                'elementType': 'geometry',
+				                'stylers': {
+				                    'color': '#fefefe'
+				                }
+				            }, {
+				                'featureType': 'arterial',
+				                'elementType': 'geometry.fill',
+				                'stylers': {
+				                    'color': '#fefefe'
+				                }
+				            }, {
+				                'featureType': 'poi',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'green',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'subway',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'manmade',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#d1d1d1'
+				                }
+				            }, {
+				                'featureType': 'local',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#d1d1d1'
+				                }
+				            }, {
+				                'featureType': 'arterial',
+				                'elementType': 'labels',
+				                'stylers': {
+				                    'visibility': 'off'
+				                }
+				            }, {
+				                'featureType': 'boundary',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#fefefe'
+				                }
+				            }, {
+				                'featureType': 'building',
+				                'elementType': 'all',
+				                'stylers': {
+				                    'color': '#d1d1d1'
+				                }
+				            }, {
+				                'featureType': 'label',
+				                'elementType': 'labels.text.fill',
+				                'stylers': {
+				                    'color': '#999999'
+				                }
+				            }]
+				        }
+				    },
+				    series : [
+				        {
+				            name: '访问量',
+				            type: 'scatter',
+				            //使用的坐标系，这里用的是“bmap” 即是百度地图
+			                //'cartesian2d'使用二维的直角坐标系（也称笛卡尔坐标系），通过 xAxisIndex, yAxisIndex指定相应的坐标轴组件。
+			                // 'polar'
+			                // 使用极坐标系，通过 polarIndex 指定相应的极坐标组件
+			                //'geo'  这个地理坐标系很强大的，但是你需要自己导入地图包，比如你是某个省的，你需要去找到某个省的geoJSON
+			                //使用地理坐标系，通过 geoIndex 指定相应的地理坐标系组件。
+				            coordinateSystem: 'bmap',
+				            data: convertData(data),
+				            symbolSize: function (val) {
+				                return val[2] / 1;
+				            },
+				            label: {
+				                formatter: '{b}',//a（系列名称），b（数据名称），c（数值数组）, d（无）
+				                position: 'right',
+				                show: false
+				            },
+				            itemStyle: {
+				                color: 'purple'
+				            },
+				            emphasis: {
+				                label: {
+				                    show: true
+				                }
+				            }
+				        },
+				        {
+				            name: 'Top 5',
+				            type: 'effectScatter', //带有涟漪特效动画的散点（气泡）图。利用动画特效可以将某些想要突出的数据进行视觉突出。
+				            coordinateSystem: 'bmap',
+				            data: convertData(data.sort(function (a, b) {
+				                return b.value - a.value;
+				            }).slice(0, 6)),
+				            symbolSize: function (val) {
+				                return val[2] / 1;
+				            },
+				            //配置何时显示特效。
+			                //   可选：
+			                //'render' 绘制完成后显示特效。
+			                //'emphasis' 高亮（hover）的时候显示特效。
+				            showEffectOn: 'render',
+				            rippleEffect: {
+				                brushType: 'fill'// 波纹的绘制方式，可选 'stroke' 和 'fill'。
+				            },
+				            hoverAnimation: true,
+				            label: {
+				                formatter: '{b}',
+				                position: 'right',
+				                show: true
+				            },
+				            itemStyle: {
+				                color: 'purple',
+				                shadowBlur: 10,
+				                shadowColor: '#333'
+				            },
+				            zlevel: 1
+				        }
+				    ]
+				};;
+				if (option && typeof option === "object") {
+				    myChart.setOption(option, true);
+				}
+			}
+       </script>
+    	<script>
+	        var _hmt = _hmt || [];
+	        (function() {
+	          var hm = document.createElement("script");
+	          hm.src = "https://hm.baidu.com/hm.js?b393d153aeb26b46e9431fabaf0f6190";
+	          var s = document.getElementsByTagName("script")[0]; 
+	          s.parentNode.insertBefore(hm, s);
+	        })();
+        </script>
+    </body>
+</html>

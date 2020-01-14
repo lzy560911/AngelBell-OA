@@ -1,8 +1,9 @@
 package cn.angelbell.oa.service.user;
 
-import java.util.List;
 
 import org.springframework.stereotype.Service;
+
+import com.github.pagehelper.PageInfo;
 
 import cn.angelbell.oa.entity.User;
 
@@ -22,7 +23,7 @@ public interface UserService {
      * @return
      * @throws Exception
      */
-    List<User> getUsersTypeList() throws Exception;
+	PageInfo<User> getUsersTypeList(Integer pageNum, Integer pageSize) throws Exception;
     
     /**
      * 
